@@ -1,80 +1,76 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 class General {
-    isLightOn;
-    lightIntensity;
-    componentsData = {
-        hall: {
-            name: "hall",
-            lightIntensity: 5,
-            numOfLights: 6,
-            isLightOn: false,
-            autoOn: "06:30",
-            autoOff: "22:00",
-            usage: [22, 11, 12, 10, 12, 17, 22],
-        },
-        bedroom: {
-            name: "bedroom",
-            lightIntensity: 5,
-            numOfLights: 3,
-            isLightOn: false,
-            autoOn: "06:30",
-            autoOff: "22:00",
-            usage: [18, 5, 7, 5, 6, 6, 18],
-        },
-        bathroom: {
-            name: "bathroom",
-            lightIntensity: 5,
-            numOfLights: 1,
-            isLightOn: false,
-            autoOn: "06:30",
-            autoOff: "22:00",
-            usage: [2, 1, 1, 1, 1, 3, 3],
-        },
-        ["outdoor lights"]: {
-            name: "outdoor lights",
-            lightIntensity: 5,
-            numOfLights: 6,
-            isLightOn: false,
-            autoOn: "06:30",
-            autoOff: "22:00",
-            usage: [15, 12, 13, 9, 12, 13, 18],
-        },
-        ["guest room"]: {
-            name: "guest room",
-            lightIntensity: 5,
-            numOfLights: 4,
-            isLightOn: false,
-            autoOn: "06:30",
-            autoOff: "22:00",
-            usage: [12, 10, 3, 9, 5, 5, 18],
-        },
-        kitchen: {
-            name: "kitchen",
-            lightIntensity: 5,
-            numOfLights: 3,
-            isLightOn: false,
-            autoOn: "06:30",
-            autoOff: "22:00",
-            usage: [12, 19, 13, 11, 12, 13, 18],
-        },
-        ["walkway & corridor"]: {
-            name: "walkway & corridor",
-            lightIntensity: 5,
-            numOfLights: 8,
-            isLightOn: false,
-            autoOn: "06:30",
-            autoOff: "22:00",
-            usage: [12, 19, 13, 15, 22, 23, 18],
-        },
-    };
-    wifiConnections = [
-        { id: 0, wifiName: "Inet service", signal: "excellent" },
-        { id: 1, wifiName: "Kojo_kwame121", signal: "poor" },
-        { id: 2, wifiName: "spicyalice", signal: "good" },
-        { id: 3, wifiName: "virus", signal: "good" },
-    ];
     constructor() {
+        this.componentsData = {
+            hall: {
+                name: "hall",
+                lightIntensity: 5,
+                numOfLights: 6,
+                isLightOn: false,
+                autoOn: "06:30",
+                autoOff: "22:00",
+                usage: [22, 11, 12, 10, 12, 17, 22],
+            },
+            bedroom: {
+                name: "bedroom",
+                lightIntensity: 5,
+                numOfLights: 3,
+                isLightOn: false,
+                autoOn: "06:30",
+                autoOff: "22:00",
+                usage: [18, 5, 7, 5, 6, 6, 18],
+            },
+            bathroom: {
+                name: "bathroom",
+                lightIntensity: 5,
+                numOfLights: 1,
+                isLightOn: false,
+                autoOn: "06:30",
+                autoOff: "22:00",
+                usage: [2, 1, 1, 1, 1, 3, 3],
+            },
+            ["outdoor lights"]: {
+                name: "outdoor lights",
+                lightIntensity: 5,
+                numOfLights: 6,
+                isLightOn: false,
+                autoOn: "06:30",
+                autoOff: "22:00",
+                usage: [15, 12, 13, 9, 12, 13, 18],
+            },
+            ["guest room"]: {
+                name: "guest room",
+                lightIntensity: 5,
+                numOfLights: 4,
+                isLightOn: false,
+                autoOn: "06:30",
+                autoOff: "22:00",
+                usage: [12, 10, 3, 9, 5, 5, 18],
+            },
+            kitchen: {
+                name: "kitchen",
+                lightIntensity: 5,
+                numOfLights: 3,
+                isLightOn: false,
+                autoOn: "06:30",
+                autoOff: "22:00",
+                usage: [12, 19, 13, 11, 12, 13, 18],
+            },
+            ["walkway & corridor"]: {
+                name: "walkway & corridor",
+                lightIntensity: 5,
+                numOfLights: 8,
+                isLightOn: false,
+                autoOn: "06:30",
+                autoOff: "22:00",
+                usage: [12, 19, 13, 15, 22, 23, 18],
+            },
+        };
+        this.wifiConnections = [
+            { id: 0, wifiName: "Inet service", signal: "excellent" },
+            { id: 1, wifiName: "Kojo_kwame121", signal: "poor" },
+            { id: 2, wifiName: "spicyalice", signal: "good" },
+            { id: 3, wifiName: "virus", signal: "good" },
+        ];
         this.isLightOn = false;
         this.lightIntensity = 5;
     }
@@ -166,4 +162,4 @@ class General {
         return newWord;
     }
 }
-exports.default = General;
+export default General;
