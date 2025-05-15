@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // Latest JS features
+    "module": "ESNext", // For Node.js compatibility
+    "rootDir": "js", // Your source files
+    "outDir": "dist", // Compiled files go here
+    "strict": true, // Enables all strict type-checking options
+    "noImplicitAny": true, // Prevents variables from being implicitly 'any'
+    "esModuleInterop": true, // Allows importing commonJS modules
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true // Speeds up build by skipping type checks in libs
+  },
+  "include": [
+    "./js/**/*" // All files and subfolders in src/
+  ],
+  "exclude": ["node_modules"]
+}
