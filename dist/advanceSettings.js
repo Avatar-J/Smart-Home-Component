@@ -45,7 +45,7 @@ class AdvanceSettings extends Light {
         const element = this.closestSelector(selectedElement, ".defaultOn", "input");
         const { value } = element;
         // when value is falsy
-        if (!!value)
+        if (!value)
             return;
         const component = this.getComponentData(element, ".advanced_features", ".component_name");
         if (component) {
@@ -64,7 +64,7 @@ class AdvanceSettings extends Light {
         const element = this.closestSelector(selectedElement, ".defaultOff", "input");
         const { value } = element;
         // when value is falsy
-        if (!!value)
+        if (!value)
             return;
         const component = this.getComponentData(element, ".advanced_features", ".component_name");
         if (component) {

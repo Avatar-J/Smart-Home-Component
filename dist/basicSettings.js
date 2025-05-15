@@ -32,7 +32,7 @@ class Light extends General {
     }
     lightComponentSelectors(lightButtonElement) {
         const room = this.getSelectedComponentName(lightButtonElement);
-        const componentData = this.getComponent(room[0]);
+        const componentData = this.getComponent(room);
         const childElement = lightButtonElement.firstElementChild;
         const background = this.closestSelector(lightButtonElement, ".rooms", "img");
         return { room, componentData, childElement, background };
@@ -69,7 +69,7 @@ class Light extends General {
             this.sliderLight(componentData.isLightOn, lightSwitch);
             return;
         }
-        componentData.isLightOn = false;
+        componentData.isLightOn = true;
         this.sliderLight(componentData.isLightOn, lightSwitch);
     }
     sliderLight(isLightOn, lightButtonElement) {
