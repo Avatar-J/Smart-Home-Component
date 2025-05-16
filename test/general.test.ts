@@ -157,17 +157,17 @@ describe("General class", () => {
       "formatTextToClassName"
     );
     const roomData = {
-      name: "kitchen",
+      name: "guest room",
       lightIntensity: 5,
-      numOfLights: 3,
+      numOfLights: 4,
       isLightOn: false,
       autoOn: "06:30",
       autoOff: "22:00",
-      usage: [12, 19, 13, 11, 12, 13, 18],
+      usage: [12, 10, 3, 9, 5, 5, 18],
     };
 
     newObj.setComponentElement(roomData);
 
-    // expect(spyFormatTextToClassName).toHaveBeenCalledTimes(1);
+    expect(spyFormatTextToClassName).toHaveBeenCalledTimes(1);
   });
 });
